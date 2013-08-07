@@ -1,10 +1,11 @@
-% LaTeX file for resume 
-% This file uses the resume document class (res.cls)
+% LaTeX file for cv 
 
-\documentclass{res} 
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+% This file uses the resume document class (res.cls)
+\documentclass{res}
+
+
 \newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage{hyperref}
 \usepackage{fancyhdr}  % use this package to get a 2 line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
 \setlength{\headheight}{24pt} % allow room for 2-line header
@@ -19,11 +20,16 @@
 \thispagestyle{empty} % this page has no header  
 \name{KURT MCALPINE\\[12pt]}% the \\[12pt] adds a blank line after name
 
-\address{{\bf Address} \\ 39A Ngahere Views \\
-  Orewa, 0931 \\   Auckland \\ New Zealand}      
+\address{{\bf Address} 
+    \\ 39A Ngahere Views
+    \\ Orewa, 0931 
+    \\ Auckland 
+    \\ New Zealand}      
                                       
-\address{{\bf Contact} \\ Kurt McAlpine \\ kurtmcalpine@gmail.com \\
-  +64 220 459 539 }
+\address{{\bf Contact} 
+    \\ Kurt McAlpine 
+    \\ \href{mailto:kurtmcalpine@gmail.com}{kurtmcalpine@gmail.com}
+    \\ +64 220 459 539 }
 
 
 
@@ -37,7 +43,7 @@ Harsh environment computer assembly
    \begin{itemize} \itemsep -2pt % reduce space between items
    \item At STX most of my work consisted of assembling harsh environment computers and open frame monitors. STX has taught me about many aspects of the IT industry.
    \item Relevant coding experience included using .NET to write software to send commands to serial printers for testing purposes.
-   \item Reference: David Matheson, +64 274 849 918, david@stx.co.nz
+   \item Reference: David Matheson, +64 274 849 918, \href{mailto:david@stx.co.nz}{david@stx.co.nz}
  \end{itemize}
  
 {\sl Pencilcase} \hfill        2 February 2012 - Present \\
@@ -46,7 +52,7 @@ Mathematic, Physics and Chemistry tutor.
    \begin{itemize} \itemsep -2pt % reduce space between items
    \item Work as a high school tutor for science courses
    \item Tutoring requires excellent communication and explainitory skills to convey difficult to understand ideas to students and present it in a way that helps the student grasp the ideas easily
-   \item Reference: Jesse Pirini, +64 272 259 774, jessepirini@gmail.com
+   \item Reference: Jesse Pirini, +64 272 259 774, \href{mailto:jessepirini@gmail.com}{jessepirini@gmail.com}
  \end{itemize}
  
 \vspace{0.2in}
@@ -75,7 +81,7 @@ Key grades:
 
  \end{itemize}
  \vspace{0.2in} 
- {\sl \textbf{Iterests}}
+ {\sl \textbf{Interests}}
   
    \begin{itemize} \itemsep -2pt % reduce space between items
    \item \textbf{Coding competitions:} \\ \hfill Hacktivate Heist:
@@ -87,9 +93,9 @@ Key grades:
    techniques I made it through to Round 1A.   
    \item \textbf{Server network:} \\ \hfill I maintain a 8TB file server 
    in my home network. I built it as a hobby to store files securely and 
-   reliably by having five 2TB HDD in a RAID 5 configuration.
-   
+   reliably by having five 2TB HDD in a RAID 5 configuration.   
  \end{itemize}
+ 
  
  
  
