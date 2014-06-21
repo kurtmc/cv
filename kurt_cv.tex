@@ -11,22 +11,21 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}  % use this package to get a 2 line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
-\setlength{\headheight}{24pt} % allow room for 2-line header
-\setlength{\headsep}{24pt}  % space between header and text
-\setlength{\headheight}{24pt} % allow room for 2-line header
-\topmargin=-3cm % start text higher on the page
+%\setlength{\headheight}{24pt} % allow room for 2-line header
+%\setlength{\headsep}{24pt}  % space between header and text
+%\setlength{\headheight}{24pt} % allow room for 2-line header
+%\topmargin=-3cm % start text higher on the page
 
 \begin{document}
 \thispagestyle{empty} % this page has no header  
-\name{KURT MCALPINE\\[12pt]}% the \\[12pt] adds a blank line after name
+\name{KURT MCALPINE}
 
 \address{Auckland 
-    \\ New Zealand}      
+        \\ New Zealand}      
                                       
-\address{Kurt McAlpine 
-    \\ \href{mailto:kurt@linux.com}{kurt@linux.com}
-    \\ \href{http://kurt-mcalpine.com}{http://kurt-mcalpine.com}
-    \\ +64 220 459 539 }
+\address{\href{mailto:kurt@linux.com}{kurt@linux.com}
+        \\ \href{http://kurt-mcalpine.com}{http://kurt-mcalpine.com}
+        \\ +64 220 459 539 }
 
 
 
@@ -34,31 +33,31 @@
  
 \section{\centerline{PROFESSIONAL EXPERIENCE}} 
 \vspace{8pt}
-{\sl Vista Entertainment Solutions - Intership} \hfill        19 November 2013 - Present \\
+{\sl Vista Entertainment Solutions - Intership} \hfill  19 November 2013 - Present \\
 Windows application developer, student intern
-  
+
 \begin{itemize} \itemsep -2pt % reduce space between items
-   \item Worked as a student intern over the summer for 2013/2014 at Vista Entertainment Solutions, a Microsoft Gold Certified Partner.
-   \item My work over the summer was involved working on bugs in the cinema management software. The technology used in that area are: WinForms, Visual Basic, C\#, .NET, Microsoft SQL Server
-   \item Some of my work included web development, I updated the user interface on a legacy website that served pages using XSLT, other technologies used were JavaScript, SASS, HTML, ASP.NET
+        \item Worked as a student intern over the summer for 2013/2014 at Vista Entertainment Solutions, a Microsoft Gold Certified Partner.
+        \item My work over the summer was involved working on bugs in the cinema management software. The technology used in that area are: WinForms, Visual Basic, C\#, .NET, Microsoft SQL Server
+        \item Some of my work included web development, I updated the user interface on a legacy website that served pages using XSLT, other technologies used were JavaScript, SASS, HTML, ASP.NET
 \end{itemize}
  
 \vspace{8pt}
-{\sl Vista - Part time } \hfill        19 November 2013 - Present \\
+{\sl Vista - Part time } \hfill 19 November 2013 - Present \\
 Windows application developer, student intern
   
 \begin{itemize} \itemsep -2pt % reduce space between items
-    \item Currently works as a part time Android developer, I work on a consumer application that allows custerms to buy tickets to see movies at their local cinema.
-    \item My work on the Android application involves:
-      \begin{itemize}
-	\item collaborating with other developers, test analysts, business analysts and buniness people 
-	\item using a bug tracker to find bugs relating to the application
-	\item using version control system to get the lastest source code from a centralised server
-	\item fixing internal and customer visible bugs
-	\item implementing features designed by the business analyst on the team
-	\item merging changes into the main and release branches
-	\item having my work review and quality tested
-  \end{itemize}
+        \item Currently works as a part time Android developer, I work on a consumer application that allows custerms to buy tickets to see movies at their local cinema.
+        \item My work on the Android application involves:
+        \begin{itemize}
+                \item collaborating with other developers, test analysts, business analysts and buniness people 
+                \item using a bug tracker to find bugs relating to the application
+                \item using version control system to get the lastest source code from a centralised server
+                \item fixing internal and customer visible bugs
+                \item implementing features designed by the business analyst on the team
+                \item merging changes into the main and release branches
+                \item having my work review and quality tested
+        \end{itemize}
 \end{itemize}
  
 \vspace{0.2in}
@@ -67,66 +66,37 @@ Windows application developer, student intern
 {\sl University of Auckland}, Software Engineering \\
 Started 2012 \hspace{0.2in}  Graduate 2016 \hfill Current GPA: 7.063 (range: 1(D-) - 9(A+)) \\
 Key grades:
-    \begin{itemize} \itemsep -2pt % reduce space between items
-    \item \textbf{A} --- COMPSYS 201 - Computer Engineering
-    \item \textbf{A-} --- SOFTENG 250 - Intro to Data Structures
-    \item \textbf{A-} --- SOFTENG 211 - Software Engineering Theory 
-    \item \textbf{A} --- SOFTENG 254 - Quality Assurance
-    \end{itemize}
+\begin{itemize} \itemsep -2pt % reduce space between items
+        \item \textbf{A} --- COMPSYS 201 - Computer Engineering
+        \item \textbf{A-} --- SOFTENG 250 - Intro to Data Structures
+        \item \textbf{A-} --- SOFTENG 211 - Software Engineering Theory 
+        \item \textbf{A} --- SOFTENG 254 - Quality Assurance
+\end{itemize}
  
 \vspace{0.2in} 
 \section{\centerline{ADDITIONAL INFORMATION}} 
 \vspace{8pt}
-{\sl \textbf{Linux}}
-	\begin{itemize}
-		\item I am very interested in the Linux operating system. I have extensive knowlege the Linux environment and applications.
-		\item Examples of applications that I use on a regular basis are: ssh, apache, make and gcc
-	\end{itemize}
-\vspace{8pt}
 {\sl \textbf{Projects}}
 \begin{itemize}
-	\item \textbf{C} Wrote a kernel module that can be dynamically loaded into the linux kernel during runtime. It uses a character device to take in a phrase as a string and return it revesed, ie "Hello World" becomes "World Hello". It's a trivial alogrithm but since it is implemented in the kernel there are many restrictions to what you can do for example there is no easy way to do floating point arithmatic, the stack is fixed and all the code you write is asynchronus. This project demonstrates my understanding of low level C programming and understanding of fundamental kernel concepts. (link to project \href{https://github.com/streetdragon/reverse\_module}{https://github.com/streetdragon/reverse\_module}) 
-	\item \textbf{C++} Wrote an OpenGL application in C++ for a university project. The application rendered a simple robot which could be controlled using the keyboard to catch falling objects. The robot was rendered using a combination of transoformed primitives (cubes and cylinders) and a revoled surface (for the net that catches object). The surface was rendered using a hermite curve that was revolved around an axis, a texture map was applied to the surface so that it looked more like a net.
-	\item \textbf{Java} I currently work as an Android developer for Vista, I use the eclipse plugin at work to develop for Android. The application I work on for Vista is an app that allows users to purchase cinama tickets for movies from their mobile phone. It has many features that you would get if you purchases a movie ticket from the cinema website or physically at the cinema. Features include the ability to use your loyalty account (receive and redeem points when buying tickets) seat selection, filter cinemas by location and movie.
-	\item \textbf{Bash} I have written a file renaming command line tool in bash. The tool detects a certain pattern in a group of files and applies a new pattern to rename the files to help you organise files on your computer. (link to project \href{https://github.com/streetdragon/renamer}{https://github.com/streetdragon/renamer})
+        \item \textbf{C} Wrote a kernel module that can be dynamically loaded into the linux kernel during runtime. It uses a character device to take in a phrase as a string and return it revesed, ie "Hello World" becomes "World Hello". It's a trivial alogrithm but since it is implemented in the kernel there are many restrictions to what you can do for example there is no easy way to do floating point arithmatic, the stack is fixed and all the code you write is asynchronus. This project demonstrates my understanding of low level C programming and understanding of fundamental kernel concepts. (link to project \href{https://github.com/streetdragon/reverse\_module}{https://github.com/streetdragon/reverse\_module}) 
+        \item \textbf{C++} Wrote an OpenGL application in C++ for a university project. The application rendered a simple robot which could be controlled using the keyboard to catch falling objects. The robot was rendered using a combination of transoformed primitives (cubes and cylinders) and a revoled surface (for the net that catches object). The surface was rendered using a hermite curve that was revolved around an axis, a texture map was applied to the surface so that it looked more like a net.
+        \item \textbf{Java} I currently work as an Android developer for Vista, I use the eclipse plugin at work to develop for Android. The application I work on for Vista is an app that allows users to purchase cinama tickets for movies from their mobile phone. It has many features that you would get if you purchases a movie ticket from the cinema website or physically at the cinema. Features include the ability to use your loyalty account (receive and redeem points when buying tickets) seat selection, filter cinemas by location and movie.
+        \item \textbf{Bash} I have written a file renaming command line tool in bash. The tool detects a certain pattern in a group of files and applies a new pattern to rename the files to help you organise files on your computer. (link to project \href{https://github.com/streetdragon/renamer}{https://github.com/streetdragon/renamer})
+        \item \textbf{HTML} I have some experience developing small web applications at Vista, I worked on an application at Vista that our clients used to manange loyalty members, points and rewards. Some of the technologies I used whilst working on that particular product was HTML5 for the front end, SASS to generate CSS to style the HTML, JavaScript for form validation, Microsoft T-SQL for query results and updating data. I even had to update some XSLT that was used to generate some of the webpages.
 \end{itemize}
+
 \vspace{8pt}
-{\sl \textbf{Web skills}}
-\vspace{8pt}
-\begin{itemize}
-	\item \textbf{HTML} I have some experience developing small web applications at Vista, I worked on an application at Vista that our clients used to manange loyalty members, points and rewards. Some of the technologies I used whilst working on that particular product was HTML5 for the front end, SASS to generate CSS to style the HTML, JavaScript for form validation, Microsoft T-SQL for query results and updating data. I even had to update some XSLT that was used to generate some of the webpages.
-\end{itemize}
 \vspace{8pt}
 {\sl \textbf{Nerdy skills}}
 \begin{itemize}
-	\item \LaTeX{} I used \LaTeX{} to prepare reports and assignment write ups for university, I have also used it to write my CV.
-	\item \textbf{Vim} I use this command line text editor to do quick edits, I have a good enough knowlege of the shortcuts to allow me to quickly edit files in the terminal, Vim is great for editting config files over SSH.
+        \item \LaTeX{} I used \LaTeX{} to prepare reports and assignment write ups for university, I have also used it to write my CV.
+        \item \textbf{Vim} I use this command line text editor to do quick edits, I have a good enough knowlege of the shortcuts to allow me to quickly edit files in the terminal, Vim is great for editting config files over SSH.
+        \item \textbf{Linux}
+        \begin{itemize}
+                \item I am very interested in the Linux operating system. I have extensive knowlege the Linux environment and applications.
+                \item Examples of applications that I use on a regular basis are: ssh, apache, make and gcc
+        \end{itemize}
 \end{itemize}
-{\sl \textbf{Skills}}
-  
-   \begin{itemize} \itemsep -2pt % reduce space between items
-   \item \textbf{Programming languages:} \\ \hfill I am proficient in Java and C and would be happy to use those languages in a technical interview.
-   I've used many languages at university and work some of them would include: Python, BASH, C\#, Visual Basic, PHP, JavaScript and XSLT. 
-   \item \textbf{Operating systems:} \\ \hfill I have plenty of experience installing and using several operating systems. These include Windows based operating systems to Unix like operating systems where I have spent many hours installing, configuring and experimenting with them.
-   \item \textbf{Web:} \\ \hfill I have experience developing small websites using HTML 5, CSS 3, JavaScript and PHP.
-   As well as professional experience from my work at Vista
-   \item \textbf{Markup languages:} \\ Very familiar with HTML from my web development experience and I regularly use \LaTeX{} to prepare documents such as this one.
 
- \end{itemize}
- \vspace{0.2in} 
- {\sl \textbf{Interests}}
-  
-   \begin{itemize} \itemsep -2pt % reduce space between items
-   \item \textbf{Mobile application programming:} \\ \hfill As well as working
-   on Android for Vista, I maintain an income calculator on the Google Play store
-   it computes your Weekly/Fortnightly income tax based on your hourly pay
-   and hours worked in the week.
- \end{itemize}
- 
- 
- 
- 
-
- 
 \end{resume} 
 \end{document}
