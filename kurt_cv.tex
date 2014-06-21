@@ -1,10 +1,11 @@
 % LaTeX file for cv 
 
 % This file uses the resume document class (res.cls)
-\documentclass{res}
+\documentclass[margin=1cm]{res}
 
 % Page margins
-\usepackage[a4paper, margin=1.5cm]{geometry}
+%\usepackage[cm]{fullpage}
+\usepackage[a4paper, top=1cm, bottom=1cm, left=2cm, right=2cm]{geometry}
 
 
 \newsectionwidth{0pt}  % So the text is not indented under section headings
@@ -32,7 +33,7 @@
 \begin{resume}
  
 \section{\centerline{PROFESSIONAL EXPERIENCE}} 
-\vspace{8pt}
+\vspace{4pt}
 {\sl Vista Entertainment Solutions - Internship} \hfill  19 November 2013 - Present \\
 Windows application developer, student intern
 
@@ -42,14 +43,11 @@ Windows application developer, student intern
         \item Some of my work included web development, I updated the user interface on a legacy website that served pages using XSLT, other technologies used were JavaScript, SASS, HTML, ASP.NET
 \end{itemize}
  
-\vspace{8pt}
-{\sl Vista - Part time } \hfill 19 November 2013 - Present \\
-Windows application developer, student intern
-  
+{\sl Vista - Part time } \hfill 19 November 2013 - Present
 \begin{itemize} \itemsep -2pt % reduce space between items
         \item Currently works as a part time Android developer, I work on a consumer application that allows customers to buy tickets to see movies at their local cinema.
         \item My work on the Android application involves:
-        \begin{itemize}
+        \begin{itemize} \itemsep -2pt % reduce space between items
                 \item collaborating with other developers, test analysts, business analysts and business people 
                 \item using a bug tracker to find bugs relating to the application
                 \item using version control system to get the latest source code from a centralized server
@@ -60,9 +58,7 @@ Windows application developer, student intern
         \end{itemize}
 \end{itemize}
  
-\vspace{0.2in}
 \section{\centerline{EDUCATION}} 
-\vspace{8pt} 
 {\sl University of Auckland}, Software Engineering \\
 Started 2012 \hspace{0.2in}  Graduate 2016 \hfill Current GPA: 7.063 (range: 1(D-) - 9(A+)) \\
 Key grades:
@@ -73,9 +69,6 @@ Key grades:
         \item \textbf{A} --- SOFTENG 254 - Quality Assurance
 \end{itemize}
  
-\vspace{0.2in} 
-\section{\centerline{ADDITIONAL INFORMATION}} 
-\vspace{8pt}
 {\sl \textbf{Projects}}
 \begin{itemize}
         \item \textbf{C} Wrote a kernel module that can be dynamically loaded into the Linux kernel during run time. It uses a character device to take in a phrase as a string and return it reversed, i.e. "Hello World" becomes "World Hello". It's a trivial algorithm but since it is implemented in the kernel there are many restrictions to what you can do for example there is no easy way to do floating point arithmetic, the stack is fixed and all the code you write is asynchronous. This project demonstrates my understanding of low level C programming and understanding of fundamental kernel concepts. (link to project \href{https://github.com/streetdragon/reverse\_module}{https://github.com/streetdragon/reverse\_module}) 
