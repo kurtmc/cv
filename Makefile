@@ -19,6 +19,7 @@ seperate_cv_coverletter:
 	pdftk temp.pdf cat end-2 output $(cv_only).pdf
 	pdftk temp.pdf cat 1 output $(cover_only).pdf
 	rm temp.pdf
+	rm $(file_no_ext).pdf
 
 clean:
 	rm ./*.pdf
