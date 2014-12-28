@@ -39,31 +39,18 @@
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \quote{\small ``Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.'' -- Linus Torvalds}                                 % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+
 \makecvtitle
 
 \section{Education}
 \cventry{2012--present}{B.Eng.(Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
-%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
-%\section{Master thesis}
-%\cvitem{title}{\emph{Title}}
-%\cvitem{supervisors}{Supervisors}
-%\cvitem{description}{Short thesis abstract}
+\cvitem{Current GPA}{6.4}
+\subsection{Key Grades}
+\cvitem{A-}{SOFTENG 250 - Introduction to Data Structures}
+\cvitem{A-}{SOFTENG 211 - Software Engineering Theory}
+\cvitem{A-}{SOFTENG 370 - Operating Systems}
+\cvitem{A-}{SOFTENG 351 - Fundamentals of Database Systems}
 
 \section{Experience}
 \subsection{Vocational}
@@ -95,13 +82,14 @@ area include WinForms, Visual Basic, C\#, .NET, and Microsoft SQL Server.
 \item Some of my work included web development where I updated the user interface on a legacy website
 that served pages using XSLT. Other technologies used were JavaScript, SASS, HTML, and ASP.NET.
 \end{itemize}}
-%\subsection{Miscellaneous}
-%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
-%\section{Languages}
-%\cvitemwithcomment{Language 1}{Skill level}{Comment}
-%\cvitemwithcomment{Language 2}{Skill level}{Comment}
-%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\section{Key skills}
+\cvitem{C}{Developed a kernel module that can be dynamically loaded into the Linux kernel during run time.  It uses a
+character device to take in a phrase as a string and return it reversed, i.e. ``Hello World'' becomes ``World Hello''.
+Link to project: \url{https://github.com/streetdragon/reverse_module}}
+\cvitem{Bash}{Developed a file renaming command line tool in bash. The tool detects a certain pattern in a group of
+filenames and applies a new pattern to rename the files for improved readability. Link to project:
+\url{https://github.com/streetdragon/renamer}}
 
 \section{Favourite Linux tools}
 \cvdoubleitem{Text editor}{vim}{Desktop environment}{KDE}
