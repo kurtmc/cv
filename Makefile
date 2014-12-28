@@ -22,3 +22,6 @@ seperate_cv_coverletter:
 
 clean:
 	rm ./*.pdf
+
+spellcheck:
+	aspell --lang=en --mode=tex check $(file_no_ext).tex
