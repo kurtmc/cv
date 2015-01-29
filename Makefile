@@ -15,10 +15,7 @@ seperate_cv_coverletter:
 	rm ./*.aux
 	rm ./*.out
 	rm ./*.log
-	pdftk $(file_no_ext).pdf cat end-1 output temp.pdf
-	pdftk temp.pdf cat end-2 output $(cv_only).pdf
-	pdftk temp.pdf cat 1 output $(cover_only).pdf
-	rm temp.pdf
+	./seperate.sh $(file_no_ext).pdf $(cv_only).pdf $(cover_only).pdf
 	rm $(file_no_ext).pdf
 
 clean:
