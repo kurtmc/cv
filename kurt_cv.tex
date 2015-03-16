@@ -39,6 +39,10 @@
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{\tiny ``Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.'' -- Linus Torvalds}                                 % optional, remove / comment the line if not wanted
 
+% These are defined so that I can use tabular
+\setlength\arrayrulewidth{.4pt}
+\setlength\tabcolsep{6pt}
+
 \begin{document}
 
 \makecvtitle
@@ -84,7 +88,7 @@ area include WinForms, Visual Basic, C\#, .NET, and Microsoft SQL Server.
 that served pages using XSLT. Other technologies used were JavaScript, SASS, HTML, and ASP.NET.
 \end{itemize}}
 
-\section{Key skills}
+\section{Projects}
 \cvitem{C}{Developed a kernel module that can be dynamically loaded into the Linux kernel during run time.  It uses a
 character device to take in a phrase as a string and return it reversed, i.e. ``Hello World'' becomes ``World Hello''.
 Link to project: \url{https://github.com/streetdragon/reverse_module}}
@@ -93,35 +97,27 @@ filenames and applies a new pattern to rename the files for improved readability
 \url{https://github.com/streetdragon/renamer}}
 
 \section{Favourite Linux tools}
-\cvdoubleitem{Text editor}{vim}{Desktop environment}{KDE}
-\cvdoubleitem{Web server}{apache}{Package manager}{zypper}
-\cvdoubleitem{Init system}{systemd}{Distro}{OpenSUSE}
-
+\begin{tabular}{ll}
+Text editor & vim \\
+Web server  & apache \\
+Init system & systemd
+\end{tabular}
+\quad
+\quad
+\quad
+\quad
+\begin{tabular}{ll}
+Desktop environment & GNOME \\
+Package manager     & yaourt \\
+Distro              & arch
+\end{tabular}
 \section{Interests}
 \cvitem{Hacking the Linux kernel}{Checkout my kernel module on \href{https://github.com/streetdragon/reverse_module}{github}}
 \cvitem{Owning a motorcycle}{Cheapest way to park in town}
 \cvitem{Maintaining Linux servers}{I maintain an 8TB raid 6 file server at home}
 \cvitem{Community involvement}{I volunteered at the Auckland linux.conf.au in 2015, helping to setup the conference venue and pickup speakers from the airport}
 
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Workplace}{
-    \begin{itemize}
-    \item Vista
-    \item Vista
-    \end{itemize}}
-  \cvcolumn{Role}{
-    \begin{itemize}
-    \item Dev Manager
-    \item Team Lead
-    \end{itemize}}
-  \cvcolumn{Name}{
-    \begin{itemize}
-    \item Grant Smith
-    \item Darryl McLeod
-    \end{itemize}}
-  \cvcolumn[0.2]{}{Contact details provided on request}
-\end{cvcolumns}
+\section{References available upon request}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
