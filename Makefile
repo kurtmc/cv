@@ -1,7 +1,7 @@
 file_no_ext=kurt_cv
 cv_and_cover="Kurt McAlpine's CV and Cover Letter"
 cv_only="Kurt McAlpine's CV only"
-cover_only="Kurt McAlpines's cover letter only"
+cover_only="Kurt McAlpine's cover letter only"
 
 cv_and_cover:
 	pdflatex $(file_no_ext).tex
