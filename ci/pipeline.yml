@@ -3,8 +3,9 @@ resources:
   - name: cv
     type: git
     source:
-      uri: https://github.com/kurtmc/cv.git
+      uri: git@github.com:kurtmc/cv.git
       branch: master
+      private_key: ((private_key))
 
   - name: gh-release
     type: github-release
@@ -86,8 +87,12 @@ jobs:
                 cp temp_$LAST "../cover_pdf/Kurt McAlpine's Cover Letter.pdf"
                 echo "Kurt McAlpine's CV" > ../meta/name
                 echo "latest" > ../meta/tag
+      - put: cv
+        params:
+          repository: cv
+          tag: cv/version
       - put: gh-release
         params:
           name: meta/name
-          tag: meta/tag
+          tag: cv/version
           globs: ["cv_pdf/Kurt McAlpine's CV.pdf"]
