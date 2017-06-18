@@ -3,9 +3,10 @@ resources:
   - name: cv
     type: git
     source:
-      uri: git@github.com:kurtmc/cv.git
+      uri: https://github.com/kurtmc/cv.git
       branch: master
-      private_key: ((private_key))
+      username: kurtmc
+      password: ((access_token))
 
   - name: gh-release
     type: github-release
