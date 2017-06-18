@@ -1,0 +1,93 @@
+---
+resources:
+  - name: cv
+    type: git
+    source:
+      uri: https://github.com/kurtmc/cv.git
+      branch: master
+
+  - name: gh-release
+    type: github-release
+    source:
+      owner: kurtmc
+      repository: cv
+      access_token: ((access_token))
+
+jobs:
+
+  - name: build
+    serial: true
+    plan:
+      - get: cv
+        trigger: true
+      - task: build
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source:
+              repository: grog/docker-pdflatex
+          inputs:
+            - name: cv
+          outputs:
+            - name: cv_and_cover
+          run:
+            path: bash
+            args:
+              - -c
+              - |
+                cd cv
+                pdflatex kurt_cv.tex
+                mv kurt_cv.pdf "../cv_and_cover/Kurt McAlpine's CV and Cover Letter.pdf"
+      - task: separate
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source:
+              repository: alpine
+          inputs:
+            - name: cv_and_cover
+          outputs:
+            - name: cv_pdf
+            - name: cover_pdf
+            - name: meta
+          run:
+            path: sh
+            args:
+              - -c
+              - |
+                apk update > /dev/null 2>&1
+                apk add poppler-utils gawk > /dev/null 2>&1
+                cd cv_and_cover
+                pdfseparate "Kurt McAlpine's CV and Cover Letter.pdf" temp_%d
+                LAST=$(ls temp_[0-9] | awk -F "_" '
+                function max(x) {
+                  i=0;
+                  for (val in x) {
+                    if (i<=x[val]) {
+                      i=x[val];
+                    }
+                  }
+                  return i;
+                }
+
+                {
+                  a[$2]=$2;
+                  next
+                }
+
+                END {
+                  maximum=max(a);
+                  print maximum
+                }')
+
+                pdfunite $(ls temp_[1-$((LAST - 1))]) "../cv_pdf/Kurt McAlpine's CV.pdf"
+                cp temp_$LAST "../cover_pdf/Kurt McAlpine's Cover Letter.pdf"
+                echo "Kurt McAlpine's CV" > ../meta/name
+                echo "latest" > ../meta/tag
+      - put: gh-release
+        params:
+          name: meta/name
+          tag: meta/tag
+          globs: ["cv_pdf/Kurt McAlpine's CV.pdf"]
