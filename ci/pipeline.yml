@@ -87,6 +87,7 @@ jobs:
                 pdfunite $(ls temp_[1-$((LAST - 1))]) "../cv_pdf/cv.pdf"
                 cp temp_$LAST "../cover_pdf/Kurt McAlpine's Cover Letter.pdf"
                 echo -n "cv.pdf" > ../meta/name
+                echo -n "cv.pdf" > ../cv_pdf/cv.txt
       - put: cv
         params:
           repository: cv
@@ -95,4 +96,4 @@ jobs:
         params:
           name: meta/name
           tag: cv/version
-          globs: ["cv_pdf/*"]
+          globs: ["cv_pdf/*.txt"]
