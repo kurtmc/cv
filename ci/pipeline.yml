@@ -84,7 +84,7 @@ jobs:
                   print maximum
                 }')
 
-                pdfunite $(ls temp_[1-$((LAST - 1))]) "../cv_pdf/Kurt McAlpine's CV.pdf"
+                pdfunite $(ls temp_[1-$((LAST - 1))]) "../cv_pdf/cv.pdf"
                 cp temp_$LAST "../cover_pdf/Kurt McAlpine's Cover Letter.pdf"
                 echo -n "Kurt McAlpine's CV" > ../meta/name
       - put: cv
