@@ -11,7 +11,7 @@ resources:
   - name: gh-release
     type: github-release
     source:
-      owner: kurtmc
+      user: kurtmc
       repository: cv
       access_token: ((access_token))
 
