@@ -39,7 +39,6 @@
 \cventry{2016--present}{Developer}{EROAD}{Auckland}{}{
 	In 2016 I spent 3 months working the the operations team. I was responsible for:
 	\begin{itemize}
-		\item handling requests from developers
 		\item deploying particular versions of software to the staging environments
 		\item production deploys using Ansible
 		\item automating the configuration of long lived servers using Chef
@@ -95,6 +94,17 @@ that served pages using XSLT. Other technologies used were JavaScript, SASS, HTM
 \end{itemize}}
 
 \section{Personal Projects}
+	\cventry{Go}{cloudformation-resource}{\url{https://github.com/ci-pipeline/concourse-ci-resource}}{}{}{
+		This is a Concourse CI resource that allows you to deploy
+		CloudFormation stacks to AWS. It issues create or update
+		commands and logs the cloudformation events to the console.
+		}
+	\cventry{Go}{packer-resource}{\url{https://github.com/ci-pipeline/packer-resource}}{}{}{
+		This is a Concourse CI resource that allows you to build AWS
+		AMI's and Docker containers based on packer scripts. It outputs
+		the AWS AMI ID as a file which can be used elsewhere in the
+		Concourse pipeline.
+		}
 	\cventry{Go}{ec2search}{\url{https://github.com/kurtmc/ec2search}}{}{}{
 		Command line tool and library to search for EC2
 		instances by name in all regions.
