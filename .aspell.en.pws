@@ -1,13 +1,22 @@
-personal_ws-1.1 en 25 
+personal_ws-1.1 en 41 
+CloudFormation
+EBS
+Jira
 JavaCC
+AWS
+CMS
 filesystem
+msg
 instantiations
 Distro
 nginx
 systemd
 NAV
+AMI's
+EROAD
 guice
 McAlpine
+RDS
 kurtmc
 dnf
 SOFTENG
@@ -15,12 +24,19 @@ gradle
 Onehunga
 CRM
 otto
+Kinesis
+ELB's
 mockito
 WinForms
 Init
 XSLT
+Ansible
+prepend
 filenames
+DNS
 vit
 jenkins
+Redis
 github
 Freemans
+WordPress
