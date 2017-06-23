@@ -34,27 +34,48 @@
 
 \section{Education}
 \cventry{2012--2015}{B.Eng.(Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
-%\cvitem{Current GPA}{6.4}
-\subsection{Key Grades}
-\cvitem{A-}{SOFTENG 250 - Introduction to Data Structures}
-\cvitem{A-}{SOFTENG 211 - Software Engineering Theory}
-\cvitem{A-}{SOFTENG 370 - Operating Systems}
-\cvitem{A-}{SOFTENG 351 - Fundamentals of Database Systems}
 
 \section{Experience}
-\subsection{Vocational}
+\cventry{2016--present}{Developer}{EROAD}{Auckland}{}{
+	In 2016 I spent 3 months working the the operations team. I was responsible for:
+	\begin{itemize}
+		\item handling requests from developers
+		\item deploying particular versions of software to the staging environments
+		\item production deploys using Ansible
+		\item automating the configuration of long lived servers using Chef
+	\end{itemize}
+	Currently work in the Architecture team. I am responsible for:
+	\begin{itemize}
+		\item Migrating old style deploys from Chef and Ansible to
+			\href{https://concourse.ci/}{Concourse CI} pipelines
+			that build, test and deploy software once the pull
+			request is merged
+		\item Using AWS CloudFormation to build stacks that includeg EC2
+			autoscaling groups, RDS, Kinesis Streams, Redis Caches,
+			ELB's
+		\item Using the AWS API to automate the cleanup of DNS resources
+			such as AMI's and snapshots
+		\item Using the AWS API to create a large pool of EC2 EBS
+			volumes with identical data, for the purpose of having a
+			massively distrubed read only database.
+		\item Automating the deployment of Chef resources such as
+			environment state and cookbooks
+	\end{itemize}
+}
 \cventry{2015--2016}{Software Engineering Consultant}{Alchemy Agencies}{Auckland}{}{
 Worked as a consultant to make improvements to existing infrastructure:
 Activities performed:
 \begin{itemize}
-\item Modification to Sugar CRM database and forms
-\item Implemented workflow improvements to Microsoft Dynamics NAV system
-\item Implement desktop applications to improve workflow using Qt
+\item Creation of simple CMS to manage products and documents associated with
+	those products using Ruby on Rails
+\item Integrating the Ruby on Rails application with existing WordPress
+	application allowing users on the WordPress application to login and
+	download documents associated with products they have been
+	granted to read
 \end{itemize}
 }
 \cventry{2014--2015}{Android Developer}{Vista Entertainment Solutions}{Auckland}{}{Worked as an Android developer on a consumer application that allows customers
 to buy tickets to see movies at their local cinema.\\
-Link demo application: \url{https://play.google.com/store/apps/details?id=nz.co.vista.android.movie.abc}\\
 My work on the Android application involves:
 \begin{itemize}
 \item collaborating with other developers, test analysts, business analysts and business people
@@ -64,16 +85,6 @@ changes into the main and release branches
 \item fixing internal and customer visible bugs
 \item implementing features designed by the business analyst on the team
 \item having my work reviewed and quality tested
-\item highly experienced using the following tools for android development:
-	\begin{itemize}
-	\item mockito - java testing framework
-	\item gradle - build automation tool
-	\item guice - lightweight dependency injection
-	\item jenkins - continuous integration server
-	\item otto bus - android specific event bus
-	\item git - source control management
-	\end{itemize}
-\end{itemize}}
 \cventry{2013--2014}{Student Intern}{Vista Entertainment Solutions}{Auckland}{}{
 \begin{itemize}%
 \item My role involved working on bugs in the cinema management software. The technologies used in that
@@ -82,42 +93,20 @@ area include WinForms, Visual Basic, C\#, .NET, and Microsoft SQL Server.
 that served pages using XSLT. Other technologies used were JavaScript, SASS, HTML, and ASP.NET.
 \end{itemize}}
 
-\section{Projects}
-\cvitem{Java}{Developed a source to source compiler using JavaCC that took Java
-8 style lambda expressions and generated valid Java 7 anonymous class
-instantiations. The compiler also took care to check the semantics of how the
-lambda expression were used and reported useful errors if it was used
-incorrectly. Link to project:
-\url{https://github.com/kurtmc/LambdaSourceToSource}}
-\cvitem{C}{Developed a kernel module that can be dynamically loaded into the Linux kernel during run time.  It uses a
-character device to take in a phrase as a string and return it reversed, i.e. ``Hello World'' becomes ``World Hello''.
-Link to project: \url{https://github.com/kurtmc/reverse_module}}
-\cvitem{C}{Developed a simple filesystem for the FUSE interface on Linux using
-C. It's simple filesystem that reads and writes to files in memory. Link to
-project: \url{https://github.com/kurtmc/hello-world-fuse}}
-\cvitem{Bash}{Developed a file renaming command line tool in bash. The tool detects a certain pattern in a group of
-filenames and applies a new pattern to rename the files for improved readability. Link to project:
-\url{https://github.com/kurtmc/renamer}}
-
-\section{Favourite Linux tools}
-\begin{tabular}{ll}
-Text editor & vim \\
-Web server  & nginx \\
-Init system & systemd
-\end{tabular}
-\quad
-\quad
-\quad
-\quad
-\begin{tabular}{ll}
-Desktop environment & GNOME \\
-Package manager     & dnf \\
-Distro              & fedora
-\end{tabular}
-\section{Interests}
-\cvitem{Hacking the Linux kernel}{Checkout my kernel module on \href{https://github.com/kurtmc/reverse_module}{github}}
-\cvitem{Maintaining Linux servers}{I maintain an 8TB raid 6 file server at home}
-\cvitem{Community involvement}{I volunteered at the Auckland linux.conf.au in 2015, helping to setup the conference venue and pickup speakers from the airport}
+\section{Personal Projects}
+	\cventry{Go}{ec2search}{\url{https://github.com/kurtmc/ec2search}}{}{}{
+		Command line tool and library to search for EC2
+		instances by name in all regions.
+		}
+	\cventry{Go}{ec2ssh}{\url{https://github.com/kurtmc/ec2ssh}}{}{}{
+		Command line tool to ssh into a random EC2 instance that
+		matches the search criteria or run a command on all
+		instance that match the search criteria.
+		}
+	\cventry{Go}{prepare-commit-msg}{https://github.com/kurtmc/prepare-commit-msg}{}{}{
+		Git hook to prepend the current branch name to commit
+		messages. This is used to link commits to Jira tickets
+		}
 
 \section{References available upon request}
 
