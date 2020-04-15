@@ -16,9 +16,9 @@
 \phone[mobile]{+64~220~459~539}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+64~942~622~18}
 %\phone[fax]{+3~(456)~789~012}
-\email{kurt@linux.com}                               % optional, remove / comment the line if not wanted
+\email{kurt@mcalpinefree.co.nz}                               % optional, remove / comment the line if not wanted
 %\homepage{www.kurt-mcalpine.com}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[linkedin][www.linkedin.com/in/kurt-mcalpine-542b3783/]{kurt.mcalpine}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{kurtmc}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
@@ -33,10 +33,37 @@
 \makecvtitle
 
 \section{Experience}
-\cventry{2016--present}{Developer}{EROAD}{Auckland}{}{
-	Current responsibilities:
+\cventry{2018--present}{DevOps Engineer}{Halter}{Auckland}{}{
 	\begin{itemize}
-		\item Production deploys using Ansible
+		\item Deploy multi account AWS (Amazon Web Services) structure using IaC (Infrastructure as Code) and automatic deployments
+		\item Establish CI/CD (Continuous Integration / Continuous Delivery) patterns for deploying applications and core infrastructure
+		\item Implement CI/CD process for building, testing and
+			deploying of:
+			\begin{itemize}
+				\item backend applications
+				\item mobile applications using Concourse CI, AWS Device Farm and Fastlane
+				\item embedded firmware using Concourse CI and AWS IoT
+			\end{itemize}
+		\item Optimise developer workflow by building cli tool to allow
+			developers to iterate on IaC quickly
+			and safely
+	\end{itemize}
+}
+\cventry{2017--2018}{DevOps Team Lead}{Movio}{Auckland}{}{
+	\begin{itemize}
+		\item Promote the use of IaC
+		\item Adopted CI/CD strategy to deploy applications and infrastructure
+		\item Reduce manual processes for on boarding new customers by
+			way of automation thus reducing human error and
+			speeding up on boarding process
+		\item Begin migration from hand rolled database deployments to
+			AWS RDS for increased easy of use, automated backups,
+			automated failover and increased visibility through
+			monitoring.
+	\end{itemize}
+}
+\cventry{2016--2017}{Developer}{EROAD}{Auckland}{}{
+	\begin{itemize}
 		\item Automating the configuration of long lived servers using Chef
 		\item Migrating old style deploys from Chef and Ansible to
 			\href{https://concourse.ci/}{Concourse CI} pipelines
@@ -54,67 +81,63 @@
 			environment state and cookbooks
 	\end{itemize}
 }
-\cventry{2015--2016}{Software Engineering Consultant}{Alchemy Agencies}{Auckland}{}{
-Worked as a consultant to make improvements to existing infrastructure.
-Key accomplishments:
-\begin{itemize}
-	\item Created a simple CMS to manage products and documents associated
-		with those products using Ruby on Rails
-	\item Integrated the Ruby on Rails application with existing WordPress
-		application allowing users on the WordPress application to login
-		and download documents associated with products they have been
-		granted to read
-\end{itemize}
-}
-\cventry{2014--2015}{Android Developer}{Vista Entertainment Solutions}{Auckland}{}{Worked as an Android developer on a consumer application that allows customers
-to buy tickets to see movies at their local cinema.\\
-Work on the Android application involved:
-	\begin{itemize}
-		\item Collaborating with other developers, test analysts, business analysts and business people
-		\item Using a bug tracker to find bugs relating to the application
-		\item Using version control systems to get the latest source
-			code from a centralised server, merging changes into the
-			main and release branches
-		\item Fixing internal and customer visible bugs
-		\item Implementing features designed by the business analyst on the team
-		\item Having my work reviewed and quality tested
-	\end{itemize}
-}
-
-\cventry{2013--2014}{Student Intern}{Vista Entertainment Solutions}{Auckland}{}{
-	\begin{itemize}%
-		\item Working on bugs in the cinema management software. The
-			technologies used in that area include WinForms, Visual
-			Basic, C\#, .NET, and Microsoft SQL Server.
-		\item Web development, updating the user interface on a legacy
-			website that served pages using XSLT. Other technologies
-			used were JavaScript, SASS, HTML, and ASP.NET.
-	\end{itemize}
-	}
+%\cventry{2015--2016}{Software Engineering Consultant}{Alchemy Agencies}{Auckland}{}{
+%Worked as a consultant to make improvements to existing infrastructure.
+%Key accomplishments:
+%\begin{itemize}
+%	\item Created a simple CMS to manage products and documents associated
+%		with those products using Ruby on Rails
+%	\item Integrated the Ruby on Rails application with existing WordPress
+%		application allowing users on the WordPress application to login
+%		and download documents associated with products they have been
+%		granted to read
+%\end{itemize}
+%}
+%\cventry{2014--2015}{Android Developer}{Vista Entertainment Solutions}{Auckland}{}{Worked as an Android developer on a consumer application that allows customers
+%to buy tickets to see movies at their local cinema.\\
+%Work on the Android application involved:
+%	\begin{itemize}
+%		\item Collaborating with other developers, test analysts, business analysts and business people
+%		\item Using a bug tracker to find bugs relating to the application
+%		\item Using version control systems to get the latest source
+%			code from a centralised server, merging changes into the
+%			main and release branches
+%		\item Fixing internal and customer visible bugs
+%		\item Implementing features designed by the business analyst on the team
+%		\item Having my work reviewed and quality tested
+%	\end{itemize}
+%}
+%
+%\cventry{2013--2014}{Student Intern}{Vista Entertainment Solutions}{Auckland}{}{
+%	\begin{itemize}%
+%		\item Working on bugs in the cinema management software. The
+%			technologies used in that area include WinForms, Visual
+%			Basic, C\#, .NET, and Microsoft SQL Server.
+%		\item Web development, updating the user interface on a legacy
+%			website that served pages using XSLT. Other technologies
+%			used were JavaScript, SASS, HTML, and ASP.NET.
+%	\end{itemize}
+%	}
 
 \section{Education}
 \cventry{2012--2015}{B.Eng.(Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
 
-\section{Personal Projects}
-	\cventry{Go}{cloudformation-resource}{\scriptsize{\url{https://github.com/ci-pipeline/cloudformation-resource}}}{}{}{
+\section{Open Source and Personal Projects}
+	\cventry{TypeScript}{bitbucket-pullrequest-resource}{\tiny{\url{https://github.com/halter-corp/bitbucket-pullrequest-resource}}}{}{}{
+		Plugin built for Concourse CI that allows integration with the
+		Bitbucket pull requests API. Allowing the use of Concourse CI
+		to build and test changes to Bitbucket repositories and report
+		the result in the pull request.
+		}
+	\cventry{Go}{cloudformation-resource}{\tiny{\url{https://github.com/ci-pipeline/cloudformation-resource}}}{}{}{
 		A Concourse CI resource that allows you to deploy CloudFormation
 		stacks to AWS. Issues create or update commands and logs the
 		cloudformation events to the console.
 		}
-	\cventry{Go}{packer-resource}{\url{https://github.com/ci-pipeline/packer-resource}}{}{}{
-		A Concourse CI resource that allows you to build AWS AMI's and
-		Docker containers based on packer scripts. Outputs the AWS AMI
-		ID as a file which can be used elsewhere in the Concourse
-		pipeline.
-		}
-	\cventry{Go}{ec2search}{\url{https://github.com/kurtmc/ec2search}}{}{}{
-		Command line tool and library to search for EC2
-		instances by name in all regions.
-		}
 	\cventry{Go}{ec2ssh}{\url{https://github.com/kurtmc/ec2ssh}}{}{}{
-		Command line tool to ssh into a random EC2 instance that
-		matches the search criteria or run a command on all
-		instances that match the search criteria.
+		Command line tool to ssh into an EC2 instance that matches the
+		search criteria or run a command on all instances that match
+		the search criteria.
 		}
 	\cventry{Go}{prepare-commit-msg}{https://github.com/kurtmc/prepare-commit-msg}{}{}{
 		Git hook to prepend the current branch name to commit messages.
@@ -123,33 +146,33 @@ Work on the Android application involved:
 
 \section{References available upon request}
 
-\clearpage
-
-%-----       letter       ---------------------------------------------------------
-
-% Bunch of commands so that I can swap out different company names and people
-\newcommand{\companyName}{<company name>}
-\newcommand{\companyAddress}{Auckland\\New Zealand}
-\newcommand{\roleName}{<role name>}
-\newcommand{\recipientName}{Sir / Madam}
-
-% recipient data
-\recipient{\companyName{}}{\companyAddress{}}
-\date{\today}
-\opening{Dear \recipientName{},}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}
-\makelettertitle
-
-This application is for \roleName{} advertised by \companyName{}.
-
-I have completed a four year Software Engineering degree at the University of
-Auckland. I think that I can be extremely valuable to your company as I have a
-great deal of real world experience as well as contemporary knowledge gained
-through my university education.
-
-I looking forward to meeting with you in the future to discuss this further.
-
-\makeletterclosing
+%\clearpage
+%
+%%-----       letter       ---------------------------------------------------------
+%
+%% Bunch of commands so that I can swap out different company names and people
+%\newcommand{\companyName}{<company name>}
+%\newcommand{\companyAddress}{Auckland\\New Zealand}
+%\newcommand{\roleName}{<role name>}
+%\newcommand{\recipientName}{Sir / Madam}
+%
+%% recipient data
+%\recipient{\companyName{}}{\companyAddress{}}
+%\date{\today}
+%\opening{Dear \recipientName{},}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}
+%\makelettertitle
+%
+%This application is for \roleName{} advertised by \companyName{}.
+%
+%I have completed a four year Software Engineering degree at the University of
+%Auckland. I think that I can be extremely valuable to your company as I have a
+%great deal of real world experience as well as contemporary knowledge gained
+%through my university education.
+%
+%I looking forward to meeting with you in the future to discuss this further.
+%
+%\makeletterclosing
 
 \end{document}
