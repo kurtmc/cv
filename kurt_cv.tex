@@ -2,17 +2,17 @@
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{red}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{grey}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Kurt}{McAlpine}
 %\title{Linux Developer}                               % optional, remove / comment the line if not wanted
-\address{3D/18 Federal Street}{1010 Auckland}{New Zealand}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{42 Grosvenor Street, Grey Lynn}{1021 Auckland}{New Zealand}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+64~220~459~539}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+64~942~622~18}
 %\phone[fax]{+3~(456)~789~012}
@@ -33,7 +33,17 @@
 \makecvtitle
 
 \section{Experience}
-\cventry{2018--present}{DevOps Engineer}{Halter}{Auckland}{}{
+\cventry{2020--present}{Lead Cloud Engineer}{Halter}{Auckland}{}{
+	\begin{itemize}
+        \item Conduct technical interviews for potential hires
+        \item Upskill new employees on systems and processes during onboarding
+        \item Train other departments on internal tooling to enhance
+            capabilities within the company
+        \item Point of escalation for cloud infrastructure and customer
+            networking issues and design decisions
+	\end{itemize}
+}
+\cventry{2018--2020}{DevOps Engineer}{Halter}{Auckland}{}{
 	\begin{itemize}
 		\item Deploy multi account AWS (Amazon Web Services) structure using IaC (Infrastructure as Code) and automatic deployments
 		\item Establish CI/CD (Continuous Integration / Continuous Delivery) patterns for deploying applications and core infrastructure
@@ -44,9 +54,8 @@
 				\item mobile applications using Concourse CI, AWS Device Farm and Fastlane
 				\item embedded firmware using Concourse CI and AWS IoT
 			\end{itemize}
-		\item Optimise developer workflow by building cli tool to allow
-			developers to iterate on IaC quickly
-			and safely
+        \item Optimise developer workflow by building CLI tool to allow
+            developers to iterate on IaC quickly and safely
 	\end{itemize}
 }
 \cventry{2017--2018}{DevOps Team Lead}{Movio}{Auckland}{}{
@@ -72,11 +81,11 @@
 		\item Using AWS CloudFormation to build stacks that includes EC2
 			auto scaling groups, RDS, Kinesis Streams, Redis Caches,
 			ELB's
-		\item Using the AWS API to automate the cleanup of AWS resources
-			such as AMI's and snapshots
-		\item Using the AWS API to create a large pool of EC2 EBS
-			volumes with identical data, for the purpose of having a
-			massively distributed read only database
+        \item Automate the clean up of AWS resources such as AMI's and
+            snapshots
+        \item Using the AWS API to create a large pool of EC2 EBS volumes with
+            identical data, for the purpose of having a massively distributed
+            read only database
 		\item Automating the deployment of Chef resources such as
 			environment state and cookbooks
 	\end{itemize}
@@ -120,28 +129,30 @@
 %	}
 
 \section{Education}
-\cventry{2012--2015}{B.Eng.(Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2012--2015}{B.Eng. (Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
 
 \section{Open Source and Personal Projects}
+	\cventry{Go}{terraform-provider-aws}{\tiny{\url{https://github.com/hashicorp/terraform-provider-aws}}}{}{}{
+        Contributions to the AWS Terraform provider, including:
+        \begin{itemize}
+            \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/14905}{Add cidrs attribute to aws\_lightsail\_instance\_public\_ports}
+            \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/11922}{Implement error\_action on aws\_iot\_topic\_rule}
+        \end{itemize}
+        }
+	\cventry{Go}{terraform-provider-plausible}{\tiny{\url{https://github.com/mcalpinefree/terraform-provider-plausible}}}{}{}{
+        Plugin for \href{https://www.terraform.io/}{Terraform} that allows the
+        creation and modification of resources in in
+        \href{https://plausible.io/}{Plausible Analytics} using Terraform.
+		}
+	\cventry{Go}{terraform-provider-unifi}{\tiny{\url{https://github.com/paultyng/terraform-provider-unifi}}}{}{}{
+        Major contributions to Terraform provider for Unifi. This provider
+        allows the configuration of networks on Unifi Network Controller.
+		}
 	\cventry{TypeScript}{bitbucket-pullrequest-resource}{\tiny{\url{https://github.com/halter-corp/bitbucket-pullrequest-resource}}}{}{}{
 		Plugin built for Concourse CI that allows integration with the
 		Bitbucket pull requests API. Allowing the use of Concourse CI
 		to build and test changes to Bitbucket repositories and report
 		the result in the pull request.
-		}
-	\cventry{Go}{cloudformation-resource}{\tiny{\url{https://github.com/ci-pipeline/cloudformation-resource}}}{}{}{
-		A Concourse CI resource that allows you to deploy CloudFormation
-		stacks to AWS. Issues create or update commands and logs the
-		cloudformation events to the console.
-		}
-	\cventry{Go}{ec2ssh}{\url{https://github.com/kurtmc/ec2ssh}}{}{}{
-		Command line tool to ssh into an EC2 instance that matches the
-		search criteria or run a command on all instances that match
-		the search criteria.
-		}
-	\cventry{Go}{prepare-commit-msg}{https://github.com/kurtmc/prepare-commit-msg}{}{}{
-		Git hook to prepend the current branch name to commit messages.
-		Used to link commits to Jira tickets
 		}
 
 \section{References available upon request}
