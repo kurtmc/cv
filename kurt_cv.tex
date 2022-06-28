@@ -12,11 +12,11 @@
 % personal data
 \name{Kurt}{McAlpine}
 %\title{Linux Developer}                               % optional, remove / comment the line if not wanted
-\address{42 Grosvenor Street, Grey Lynn}{1021 Auckland}{New Zealand}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{1/9 New Windsor Road, Avondale}{0600 Auckland}{New Zealand}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+64~220~459~539}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+64~942~622~18}
 %\phone[fax]{+3~(456)~789~012}
-\email{kurt@mcalpinefree.co.nz}                               % optional, remove / comment the line if not wanted
+\email{kurtmcalpine@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.kurt-mcalpine.com}                         % optional, remove / comment the line if not wanted
 \social[linkedin][www.linkedin.com/in/kurt-mcalpine]{kurt.mcalpine}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
@@ -33,7 +33,15 @@
 \makecvtitle
 
 \section{Experience}
-\cventry{2020--present}{Lead Cloud Engineer}{Halter}{Auckland}{}{
+\cventry{2021--present}{Consultant}{Sourced Group}{Auckland}{}{
+	\begin{itemize}
+        \item Deliver internal talks to uplift team skills and knowledge
+        \item With with other consultants on internal projects that deliver
+            value to the business internally
+        \item Work with enterprise clients to accelerate their cloud journey
+	\end{itemize}
+}
+\cventry{2020--2021}{Lead Cloud Engineer}{Halter}{Auckland}{}{
 	\begin{itemize}
         \item Conduct technical interviews for potential hires
         \item Upskill new employees on systems and processes during onboarding
@@ -135,6 +143,7 @@
 	\cventry{Go}{terraform-provider-aws}{\tiny{\url{https://github.com/hashicorp/terraform-provider-aws}}}{}{}{
         Contributions to the AWS Terraform provider, including:
         \begin{itemize}
+            \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/25109}{Add new aws\_acmpca\_policy resource}
             \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/14905}{Add cidrs attribute to aws\_lightsail\_instance\_public\_ports}
             \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/11922}{Implement error\_action on aws\_iot\_topic\_rule}
         \end{itemize}
@@ -147,12 +156,6 @@
 	\cventry{Go}{terraform-provider-unifi}{\tiny{\url{https://github.com/paultyng/terraform-provider-unifi}}}{}{}{
         Major contributions to Terraform provider for Unifi. This provider
         allows the configuration of networks on Unifi Network Controller.
-		}
-	\cventry{TypeScript}{bitbucket-pullrequest-resource}{\tiny{\url{https://github.com/halter-corp/bitbucket-pullrequest-resource}}}{}{}{
-		Plugin built for Concourse CI that allows integration with the
-		Bitbucket pull requests API. Allowing the use of Concourse CI
-		to build and test changes to Bitbucket repositories and report
-		the result in the pull request.
 		}
 
 \section{References available upon request}
