@@ -1,8 +1,9 @@
-personal_ws-1.1 en 57 
+personal_ws-1.1 en 65 
 AMI
 AMI's
 AWS
 Ansible
+Avondale
 CMS
 CRM
 CloudFormation
@@ -31,8 +32,11 @@ TypeScript
 WinForms
 WordPress
 XSLT
+acmpca
+aws
 backend
 bitbucket
+cidrs
 cli
 cloudformation
 dnf
@@ -44,9 +48,11 @@ github
 gradle
 guice
 instantiations
+iot
 jenkins
 kurt
 kurtmc
+lightsail
 mcalpine
 mockito
 msg
@@ -55,4 +61,6 @@ otto
 prepend
 pullrequest
 systemd
+terraform
+unifi
 vit
