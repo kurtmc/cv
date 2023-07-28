@@ -2,7 +2,7 @@
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{grey}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 % adjust the page margins
 \usepackage[scale=0.85]{geometry}
@@ -33,7 +33,18 @@
 \makecvtitle
 
 \section{Experience}
-\cventry{2021--present}{Consultant}{Sourced Group}{Auckland}{}{
+\cventry{2023--present}{Cloud Architect}{Halter}{Auckland}{}{
+	\begin{itemize}
+        \item Manage day to day team agile team activities, including standup,
+            planning and retrospectives
+        \item Assist teams with application deployment designs and IaC reviews
+        \item Deep technical involvement in infrastructure design and
+            implementation
+        \item Implement automation to enable the fast and reliable deployment
+            of software systems, primary language used for this is Go
+	\end{itemize}
+}
+\cventry{2021--2023}{Consultant}{Sourced Group}{Auckland}{}{
 	\begin{itemize}
         \item Built out fully automated workflows using AWS CloudFormation,
             Lambda, Step Functions allowing users to request firewall rules and
@@ -147,7 +158,13 @@
 \cventry{2012--2015}{B.Eng. (Hons)--Software Engineering}{University of Auckland}{Auckland}{}{}  % arguments 3 to 6 can be left empty
 
 \section{Open Source and Personal Projects}
-	\cventry{Go}{terraform-provider-aws}{\tiny{\url{https://github.com/hashicorp/terraform-provider-aws}}}{}{}{
+	\cventry{}{terraform-provider-aws}{\tiny{\url{https://github.com/kurtmc/bash-eternal-history}}}{}{}{
+        Simple filesystem in userspace created for the purpose of storing your
+        bash history indefinitely and across many systems, the filesystem is
+        backed by AWS DynamoDB and can be used by multiple systems
+        simultaneously.
+        }
+	\cventry{}{terraform-provider-aws}{\tiny{\url{https://github.com/hashicorp/terraform-provider-aws}}}{}{}{
         Contributions to the AWS Terraform provider, including:
         \begin{itemize}
             \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/25109}{Add new aws\_acmpca\_policy resource}
@@ -155,45 +172,16 @@
             \item \href{https://github.com/hashicorp/terraform-provider-aws/pull/11922}{Implement error\_action on aws\_iot\_topic\_rule}
         \end{itemize}
         }
-	\cventry{Go}{terraform-provider-plausible}{\tiny{\url{https://github.com/mcalpinefree/terraform-provider-plausible}}}{}{}{
+	\cventry{}{terraform-provider-plausible}{\tiny{\url{https://github.com/mcalpinefree/terraform-provider-plausible}}}{}{}{
         Plugin for \href{https://www.terraform.io/}{Terraform} that allows the
         creation and modification of resources in in
         \href{https://plausible.io/}{Plausible Analytics} using Terraform.
 		}
-	\cventry{Go}{terraform-provider-unifi}{\tiny{\url{https://github.com/paultyng/terraform-provider-unifi}}}{}{}{
+	\cventry{}{terraform-provider-unifi}{\tiny{\url{https://github.com/paultyng/terraform-provider-unifi}}}{}{}{
         Major contributions to Terraform provider for Unifi. This provider
         allows the configuration of networks on Unifi Network Controller.
 		}
 
 \section{References available upon request}
-
-\clearpage
-
-%-----       letter       ---------------------------------------------------------
-
-% Bunch of commands so that I can swap out different company names and people
-\newcommand{\companyName}{<company name>}
-\newcommand{\companyAddress}{Auckland\\New Zealand}
-\newcommand{\roleName}{<role name>}
-\newcommand{\recipientName}{Sir / Madam}
-
-% recipient data
-\recipient{\companyName{}}{\companyAddress{}}
-\date{\today}
-\opening{Dear \recipientName{},}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}
-\makelettertitle
-
-This application is for \roleName{} advertised by \companyName{}.
-
-I have completed a four year Software Engineering degree at the University of
-Auckland. I think that I can be extremely valuable to your company as I have a
-great deal of real world experience as well as contemporary knowledge gained
-through my university education.
-
-I looking forward to meeting with you in the future to discuss this further.
-
-\makeletterclosing
 
 \end{document}
