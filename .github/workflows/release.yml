@@ -1,0 +1,23 @@
+name: build LaTex doc
+
+on: [push]
+#on:
+#  push:
+#    tags:
+#      - '*'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: kurt_cv.tex
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: kurt_cv.pdf
